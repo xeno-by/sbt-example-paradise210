@@ -12,4 +12,4 @@ please let me know at [eugene.burmako@epfl.ch](eugene.burmako@epfl.ch).
 but here in macro paradise 2.10 we are bound by binary compatibility restrictions. Therefore I had to externalize
 extra dependencies by requiring a variable named `quasiquoteCompat` implementing the additional APIs to be present
 in lexical scope most of the times you use quasiquotes. A sample (quite dirty!) implementation of `quasiquoteCompat`
-is provided in [https://github.com/scalamacros/sbt-example/blob/master/macros/src/main/scala/Compat.scala](macros/src/main/scala/Compat.scala).
+is provided in [macros/src/main/scala/Compat.scala](macros/src/main/scala/Compat.scala).
