@@ -8,7 +8,8 @@ object BuildSettings {
     scalacOptions ++= Seq(),
     // NOTE: everything except macros is compiled with vanilla scalac 2.10
     scalaVersion := "2.10.0",
-    scalaOrganization := "org.scala-lang"
+    scalaOrganization := "org.scala-lang",
+    resolvers += Resolver.sonatypeRepo("snapshots")
   )
 }
 
@@ -28,7 +29,6 @@ object MyBuild extends Build {
       // NOTE: macros are compiled with macro paradise 2.10
       scalaVersion := "2.10.2-SNAPSHOT",
       scalaOrganization := "org.scala-lang.macro-paradise",
-      resolvers += Resolver.sonatypeRepo("snapshots"),
       libraryDependencies <+= (scalaVersion)("org.scala-lang.macro-paradise" % "scala-reflect" % _)
     )
   )
