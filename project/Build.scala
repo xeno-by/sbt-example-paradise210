@@ -27,7 +27,7 @@ object MyBuild extends Build {
     file("macros"),
     settings = buildSettings ++ Seq(
       // NOTE: macros are compiled with macro paradise 2.10
-      scalaVersion := "2.10.2-SNAPSHOT",
+      scalaVersion := "2.10.3-SNAPSHOT",
       scalaOrganization := "org.scala-lang.macro-paradise",
       libraryDependencies <+= (scalaVersion)("org.scala-lang.macro-paradise" % "scala-reflect" % _)
     )
